@@ -1,0 +1,17 @@
+.header-bg{
+  background-color: antiquewhite;
+
+}
+.specialfont{
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.JOTD{
+  padding-bottom: 40px;
+}
+
+.space-taker{
+  padding: 30px 30px;
+}

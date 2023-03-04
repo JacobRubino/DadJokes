@@ -1,1 +1,0 @@
-console.log (curl 'https://shazam.p.rapidapi.com/shazam-events/list?artistId=73406786&l=en-US&from=2022-12-31&limit=50&offset=0')
