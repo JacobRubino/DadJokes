@@ -1,5 +1,11 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
-  background-color: rgb(179, 120, 11);
+  background-color: rgb(180, 131, 40);
 }
 
 .ui-grid {
@@ -11,8 +17,9 @@ body {
 }
 
 .header-bg {
-  background-color: rgb(219, 183, 137);
+  background-color: rgb(180, 131, 40);
   border-bottom: 3px solid black;
+  margin-top: 40px;
 
 }
 
@@ -23,7 +30,13 @@ body {
 }
 
 .JOTD-bg {
-  background-color: rgb(203, 169, 235);
+  display: flex;
+  background-color: rgb(180, 131, 40);
+  margin-top: 30px;
+  border-bottom: 3px solid black;
+  width: 100%;
+  height: 100%;
+  position: sticky;
 }
 
 .bgtesting {
@@ -35,13 +48,26 @@ body {
   flex-wrap: nowrap;
   border-bottom: 3px solid black;
   width: 300%;
-  background-color: rgb(179, 120, 11);
-  margin-top: 20px;
+  background-color: rgb(180, 131, 40);
+  margin-top: 5px;
+  margin-bottom: 20px;
   justify-content: center;
+  padding: 50px;
+}
+
+.main-3 {
+border: 4px solid black;
+margin: 30px;
+padding: 10px white;
+}
+
+.pic-button {
+  display: inline-flex;
+  justify-content: space-around;
+  border: 2px solid black;
   padding: 30px;
 }
 
-.image {
-border: 3px solid black;
-margin: 30px;
+.button :hover {
+  color: rgb(78, 140, 187);
 }
