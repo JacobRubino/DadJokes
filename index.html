@@ -23,9 +23,9 @@
       <div class="five wide column center aligned header-bg">
         <div class="column">
           <div class="ui three column stackable grid container">
-            <button class="column three-btn">About us</button>
-            <button class="column three-btn">Contact us</button>
-            <button class="column three-btn">Other button</button>
+            <button class="column three-btn" id="aboutUs>About us</button>
+            <button class="column three-btn" id="contactUs">Contact us</button>
+            <button class="column three-btn" id="otherBtn">Other button</button>
           </div>
         </div>
       </div>
@@ -55,6 +55,12 @@
   <!-- <div class="ui grid">
       <div class="ui stackable three wide grid container">
         <div class="five wide column">
+        <div class="five wide column">         
+        </div>
+        <div class="six wide column JOTD-bg center aligned">
+          <h1> Joke of the day</h1>
+          <h4 id="jotd">What does a baby computer call his father? Data.</h4>
+          <h4>Oh you dont like that one? tough crowd.</h4>
         </div>
         <div class="five wide column">
           <div class="column">
@@ -66,8 +72,33 @@
 
   <!-- 
      -->
-
   <!-- 
+    <div class="sixteen wide column center aligned">
+      <p>Heres some more:</p>
+    </div>
+  
+    <!-- 
+    -->
+    <!-- <div class="ui grid"> -->
+      <div class="ui stackable three wide grid container">
+        <div class="five wide center aligned column teal ">
+          <p class="joke" id="joke-1">What do you call a line of men waiting to get haircuts?</p>
+          <p class="answer" id="answer-1">A barberqueue</p>
+          <button class="ui primary button">Populate</button>
+        </div>
+        <div class="six wide center aligned column teal">
+          <p class="joke" id="joke-2">Where do pirates get their hooks?</p>
+          <p class="answer" id="answer-2">Second hand stores</p>
+          <button class="ui primary button">Populate</button>
+        </div>
+        <div class="five wide column center aligned teal">
+          <p class="joke" id="joke-3">I just broke up with my mathematician girlfriend,</p>
+          <p class="answer" id="answer-3">She was obsessed with an ex</p>
+          <button class="ui primary button">Populate</button>
+        </div>
+      </div>
+    </div>
+    <!--
     -->
   <!-- <div class="ui grid"> -->
   <!-- <div class="ui stackable three wide grid relaxed container">
@@ -78,6 +109,21 @@
       <div class="six wide center aligned column teal">
         <p>Where do pirates get their hooks?</p>
         <p>Second hand stores.</p>
+    <div class="ui stackable five wide grid container">
+      <div class="four wide column center aligned bgtesting">
+        <h1>tell your friends!</h1>
+        <label for="languages">Choose a language</label>
+        <select name="languages" id="languages">          
+          <option class="language-button" tolang="Spanish">Spanish</option>
+          <option class="language-button" tolang="French">French</option>
+          <option class="language-button" tolang="Japanese">Japanese</option>
+          <option class="language-button" tolang="Chinese">Chinese</option>
+        </select>
+      </div>
+      <div class="one wide column"></div>
+      <div class="six wide column center aligned bgtesting">
+        <p>The dad joke of yesteryears..<br> i mean yesterday</p>
+        <button class="ui primary button" id="yesterdayJokeBtn">Yesterdays joke</button>
       </div>
       <div class="five wide column center aligned teal">
         <p>I just broke up with my mathematician girlfriend,</p>
@@ -90,10 +136,10 @@
       <h1>tell your friends!</h1>
       <label for="languages">Choose a language</label>
       <select name="languages" id="languages">
-        <option value="Spanish">Spanish</option>
-        <option value="French">French</option>
-        <option value="Japanese">Japanese</option>
-        <option value="Chinese">Chinese</option>
+        <option class="language-button" tolang="es">Spanish</option>
+        <option class="language-button" tolang="fr">French</option>
+        <option class="language-button" tolang="Japanese">Japanese</option>
+        <option class="language-button" tolang="zh-TW">Chinese</option>
       </select>
     </div>
     <div class="one wide column"></div>
@@ -108,9 +154,9 @@
     </div>
   </div>
   </div>
-
   <script src="./assets/js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
+
 </body>
 
 </html>
