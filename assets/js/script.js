@@ -54,6 +54,10 @@ var settings = {
 	}
 	
 }
+$(document).ready(function(){
+	$(".dropdown-item").click(function(e){
+		if($(this).attr("tolang") != 'en'){
+			settings.data.target = $(this).attr("tolang");
 //make a request in JSON format that has the phrase that we're translating. (dad joke), the source language (english), and the target language (what user chooses) as an object.
 
 //object-- key will be language user selects value will be google language that correspondes to user language chosen.
