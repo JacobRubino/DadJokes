@@ -1,16 +1,73 @@
-.header-bg{
-  background-color: antiquewhite;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  background-color: rgb(180, 131, 40);
+}
+
+.ui-grid {
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.header-bg {
+  background-color: rgb(180, 131, 40);
+  border-bottom: 3px solid black;
+  margin-top: 40px;
 
 }
-.specialfont{
+
+.specialfont {
   text-decoration: underline;
   font-style: italic;
   font-weight: bolder;
 }
 
-.JOTD-bg{
-  background-color: rgb(203, 169, 235);
+.JOTD-bg {
+  display: flex;
+  background-color: rgb(180, 131, 40);
+  margin-top: 30px;
+  border-bottom: 3px solid black;
+  width: 100%;
+  height: 100%;
+  position: sticky;
 }
-.bgtesting{
+
+.bgtesting {
   background-color: rgb(119, 71, 71);
+}
+
+.pictures-container {
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: 3px solid black;
+  width: 300%;
+  background-color: rgb(180, 131, 40);
+  margin-top: 5px;
+  margin-bottom: 20px;
+  justify-content: center;
+  padding: 50px;
+}
+
+.main-3 {
+border: 4px solid black;
+margin: 30px;
+padding: 10px white;
+}
+
+.pic-button {
+  display: inline-flex;
+  justify-content: space-around;
+  border: 2px solid black;
+  padding: 30px;
+}
+
+.button :hover {
+  color: rgb(78, 140, 187);
 }
