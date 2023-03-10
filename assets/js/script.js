@@ -2,7 +2,7 @@ let transStr = ""
 let jokeArr = document.getElementsByClassName("joke")
 console.log(jokeArr)
 let toBeTransArr = ["i want these", "strings to", "be translated", "it will work"]
-let translationArr = [ "test1", "test2", "test3", "test4" ] 
+let translationArr = [ "joke 1", "joke2", "answer2", "joke3", "answer3", "joke4", "answer4" ] 
 let langButtArr = document.getElementsByClassName("language-button")
 let dropdownSelect = document.getElementById("languages")
 // let lang = document.getElementByName("languages")[0].label;
@@ -74,7 +74,7 @@ fetch('https://google-translate1.p.rapidapi.com/language/translate/v2/detect', o
 function makestr(){
   for (let i = 0; i < toBeTransArr.length; i++) {
     const element = toBeTransArr[i];
-    if (i<3){
+    if (i<toBeTransArr.length-1){
     transStr = transStr + element +' |'
     } else {
     transStr = transStr + element
