@@ -1,5 +1,7 @@
 let transStr = ""
-const toBeTransArr = ["i want these", "strings to", "be translated", "it will work"]
+let jokeArr = document.getElementsByClassName("joke")
+console.log(jokeArr)
+let toBeTransArr = ["i want these", "strings to", "be translated", "it will work"]
 let translationArr = [ "test1", "test2", "test3", "test4" ] 
 let langButtArr = document.getElementsByClassName("language-button")
 let dropdownSelect = document.getElementById("languages")
@@ -18,7 +20,11 @@ let dropdownSelect = document.getElementById("languages")
 // 	},
 // 	body: encodedParams
 // };
-
+for (let indx = 0; indx < jokeArr.length; indx++) {
+  const element = jokeArr[indx];
+  toBeTransArr[indx] = jokeArr[indx].innerHTML
+  console.log(toBeTransArr)
+}
 const settings = {
   "async": true,
   "crossDomain": true,
@@ -76,7 +82,7 @@ function makestr(){
     console.log(transStr)
   }
 }
-
+// try seperating by Array.prototype.join()
 
 function validate()
 {
@@ -102,7 +108,7 @@ $(document).ready(function(){
 		if(currentAtr != 'en'){
 			settings.data.target = currentAtr;
 			console.log(settings.data.target)     
-		// fetchTranslation();
+		fetchTranslation();
 			}
 		})
 	}	
