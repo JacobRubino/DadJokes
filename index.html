@@ -13,7 +13,23 @@
 
 <body>
   <!-- <div class="ui grid"> -->
-  <div class="ui grid">
+  <div class="ui three item menu">
+    <a class="item">Dad Joke Translator</a>
+    <a class="item floated right">About Dad Jokes</a>
+    <a class="item floated right">About Us</a>
+  </div>
+  <!-- <div class="ui icon menu">
+      <a class="item">
+        <i class="gamepad icon"></i>
+      </a>
+      <a class="item">
+        <i class="video camera icon"></i>
+      </a>
+      <a class="item">
+        <i class="video play icon"></i>
+      </a>
+    </div> -->
+  <!-- <div class="ui grid">
     <div class="ui stackable three wide grid ">
       <div class="five wide column center aligned header-bg">
         <h1 class="ui huge header black">Dad Joke translator</h1>
@@ -30,28 +46,38 @@
           </div>
         </div>
       </div>
-    </div>
-    <!--
+    </div> -->
+  <!--
     -->
-    <div class="sixteen wide column JOTD-bg center aligned">
-      <!-- <img class="ui small image" id="dad-approved" src="./assets/images/Dad-Hero-4.jpeg"> -->
+  <div class="ui small images">
+    <img class="mustache-icon" src="./assets/images/man-hairstyle-icon.png">
+    <img class="mustache-icon" src="./assets/images/uxwing-svg-icon-editor (4).png">
+    <img class="mustache-icon" src="./assets/images/man-hairstyle-icon copy 2.png">
+  </div>
+  <!-- <div>
+      <p class="JOTD-bg"><strong>JOKE OF THE DAY:</strong><br>What does a baby computer call his father? Data.</p>
+    </div> -->
+
+
+  <div class="six wide column JOTD-bg">
+    <div class="ui medium image">
+    <img src="./assets/images/Dad-Hero-1.png">
+  </div>
       <h1> Joke of the day</h1>
       <p class="joke" id="joke-0">What does a baby computer call his father? Data.</p>
       <p>Oh you dont like that one? tough crowd.</p><br>
     </div>
     <div class="sixteen wide column center aligned">
       <p>Heres some more:</p>
-    </div>
+    </div> -->
+  <!-- <div class="ui medium images">
     <div class="pictures-container">
-      <!-- <button class="ui primary button">Populate</button>
-      <button class="ui primary button">Populate</button>
-      <button class="ui primary button">Populate</button> -->
       <div class="ui medium images">
         <img class="ui image main-3" src="./assets/images/Dad-Hero-1.png">
         <img class="ui image main-3" id="pic-5" src="./assets/images/Dad-Hero-5.jpeg">
         <img class="ui image main-3" src="./assets/images/Dad-Hero-2.png">
     </div>
-  </div>
+  </div> -->
 
   <!-- <div class="ui grid">
       <div class="ui stackable three wide grid container">
@@ -78,28 +104,70 @@
       <p>Heres some more:</p>
     </div>
   
+
+
     -->
-    <!-- <div class="ui grid"> -->
-      <div class="ui stackable three wide grid container">
-        <div class="five wide center aligned column teal ">
-          <p class="joke" id="joke-1">What do you call a line of men waiting to get haircuts?</p>
-          <p class="answer" id="answer-1">A barberqueue</p>
-          <button class="ui primary button">Populate</button>
-        </div>
-        <div class="six wide center aligned column teal">
-          <p class="joke" id="joke-2">Where do pirates get their hooks?</p>
-          <p class="answer" id="answer-2">Second hand stores</p>
-          <button class="ui primary button">Populate</button>
-        </div>
-        <div class="five wide column center aligned teal">
-          <p class="joke" id="joke-3">I just broke up with my mathematician girlfriend,</p>
-          <p class="answer" id="answer-3">She was obsessed with an ex</p>
-          <button class="ui primary button">Populate</button>
-        </div>
+
+
+  <!-- <div class="ui grid">
+    <div class="three-wide-column">
+      <p class="joke" id="joke-1">What do you call a line of men<br> waiting to get haircuts?</p>
+      <p class="answer" id="answer-1">A barberqueue</p>
+      <button class="ui primary button">Populate</button>
+      <p class="joke" id="joke-2">Where do pirates get their hooks?</p>
+      <p class="answer" id="answer-2">Second hand stores</p>
+      <button class="ui primary button">Populate</button>
+
+      <p class="joke" id="joke-3">I just broke up with my mathematician girlfriend,</p>
+      <p class="answer" id="answer-3">She was obsessed with an ex</p>
+      <button class="ui primary button">Populate</button>
+    </div>
+  </div> -->
+  <div class="ui stackable five very relaxed grid container">
+    <div class="four wide column center aligned">
+      <h1>tell your friends!</h1>
+      <label for="languages">Choose a language</label>
+      <select name="languages" id="languages">
+        <option class="language-button" label="es">Spanish</option>
+        <option class="language-button" label="fr">French</option>
+        <option class="language-button" label="de">German</option>
+        <option class="language-button" label="zh-TW">Chinese</option><br><br>
+      </select>
+      <button class="ui inverted orange basic button translate">Translate</button>
+    </div>
+    <div class="one wide column"></div>
+    <div class="six wide column center aligned">
+      <p>The dad joke of yesteryears..<br> i mean yesterday</p>
+      <button class="ui inverted orange basic button">Yesterdays joke</button>
+    </div>
+    <div class="one wide column"></div>
+    <div class="four wide column center aligned">
+      <h2><span>HOT</span> off the press!</h2>
+      <img class="ui fluid image" src="./assets/images/unnamed.png" width="fluid">
+    </div>
+  </div>
+  </div>
+
+  <div class="ui grid"> -->
+    <div class="ui stackable three relaxed wide grid container">
+      <div class="five-wide-column-center-aligned">
+        <p class="joke" id="joke-1">What do you call a line of men waiting to get haircuts?</p>
+        <p class="answer" id="answer-1">A barberqueue</p>
+        <button class="ui inverted orange basic button">Populate</button>
+      </div>
+      <div class="five-wide-column-center-aligned">
+        <p class="joke center aligned" id="joke-2">Where do pirates get their hooks?</p>
+        <p class="answer" id="answer-2">Second hand stores</p>
+        <button class="ui inverted orange basic button">Populate</button>
+      </div>
+      <div class="five-wide-column-center-aligned">
+        <p class="joke center aligned" id="joke-3">I just broke up with my mathematician girlfriend,</p>
+        <p class="answer center aligned" id="answer-3">She was obsessed with an ex</p>
+        <button class="ui inverted orange basic button">Populate</button>
       </div>
     </div>
-    <!--
-    -->
+  </div>
+  -->
   <!-- <div class="ui grid"> -->
   <!-- <div class="ui stackable three wide grid relaxed container">
     <div class="five wide center aligned column teal ">
@@ -131,7 +199,7 @@
       </div>
     </div>
   </div> -->
-  <div class="ui stackable five relaxed grid container">
+  <!-- <div class="ui stackable five relaxed grid container">
     <div class="four wide column center aligned bgtesting">
       <h1>tell your friends!</h1>
       <label for="languages">Choose a language</label>
@@ -153,7 +221,7 @@
       <img class="ui fluid image" src="./assets/images/unnamed.png" width="fluid">
     </div>
   </div>
-  </div>
+  </div> -->
   <script src="./assets/js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
 
