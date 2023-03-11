@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: rgb(214, 194, 157);
+  background-color: rgb(214, 192, 151);
 }
 
 .specialfont {
@@ -13,11 +13,14 @@ body {
 }
 
 .five-wide-column-center-aligned {
+  margin: auto;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 60px;
   width: 33.33%;
+  text-align: center;
+
 }
 
 .small {
@@ -79,6 +82,11 @@ body {
 
 .JOTD-header {
   color:rgb(126, 26, 26);
+}
+
+.yesterday {
+  display: inline-flex;
+  flex-direction: column;
 }
 
 
