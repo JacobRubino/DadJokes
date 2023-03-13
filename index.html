@@ -6,26 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Raleway:wght@100;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Raleway:wght@100;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>TheStrings</title>
 </head>
 
 <body>
   <div class="ui three item menu">
-    <a class=" active item">Dad Joke Translator</a>
-    <a class="item floated right">About Dad Jokes</a>
-    <a class="item floated right">About Us</a>
+    <a class=" active item nav-font">Dad Joke Translator</a>
+    <a class="item floated right nav-font">About Dad Jokes</a>
+    <a class="item floated right nav-font">About Us</a>
   </div>
 
-    </div>
+  </div>
   <div class="ui small images">
     <img class="mustache-icon" src="./assets/images/man-hairstyle-icon.png">
     <img class="mustache-icon" src="./assets/images/man-hairstyle-icon copy.png">
@@ -39,138 +36,73 @@
       <div class="column JOTD white-bg">
         <div class="hidden divider"></div>
 
-  <h2 class="ui header JOTD-header">JOKE OF THE DAY</h2>
-  <p class="joke" id="joke-0">What does a baby computer call his father?</p>
-  <p class="joke" id="joke-1">Data.</p>
-  <div class="ui large images">
-    <img class="men" src="./assets/images/happy-family-at-park-royalty-free-image-1612467187.jpeg">
-  </div>
-  <div class="hidden divider"></div>
-  </div>
-  <div class="column translator">
-    <div class="hidden divider"></div>
-    <h2 class="ui header">TELL YOUR FRIENDS, TRANSLATE BELOW!</h2>
-
-    <h1>Choose a Language</h1>
-    <div class="select">
-      <select name="languages" id="languages">
-        <option class="language-button" label="es">Spanish</option>
-        <option class="language-button" label="fr">French</option>
-        <option class="language-button" label="de">German</option>
-        <option class="language-button" label="zh-TW">Chinese</option>
-        <!-- <div class="hidden divider"></div> -->
-      </select>
-    </div>
-  </div>
-
-  </div>
-  </div>
-  </div>
-  </div>
-
-
-  <!-- <div class="ui grid">
-      <div class="ui stackable three wide grid container">
-        <div class="five wide column">
-        <div class="five wide column">         
+        <h1 class="ui header JOTD-header font">JOKE OF THE DAY:</h1>
+        <p class="joke font" id="joke-0"><strong>WHAT DOES A BABY COMPUTER CALL HIS FATHER?</strong></p>
+        <p class="joke font" id="joke-1"><strong>DATA.</strong></p>
+        <div class="ui large images">
+          <img class="men" src="./assets/images/happy-family-at-park-royalty-free-image-1612467187.jpeg">
         </div>
-        <div class="six wide column JOTD-bg center aligned">
-          <h1> Joke of the day</h1>
-          <h4 id="jotd">What does a baby computer call his father? Data.</h4>
-          <h4>Oh you dont like that one? tough crowd.</h4>
-        </div>
-        <div class="five wide column">
-          <div class="column">
-            <div class="ui three column stackable grid container">
-            </div>
-          </div>
-        </div>
-      </div> -->
+        <div class="hidden divider"></div>
+      </div>
+      <div class="column translator">
+        <div class="hidden divider"></div>
+        <h1 class="ui header font">TELL YOUR FRIENDS, TRANSLATE BELOW!</h1>
 
-  <!-- 
-     -->
-  <!-- 
-    <div class="sixteen wide column center aligned">
-      <p>Heres some more:</p>
-    </div>
-  
-
-
-    -->
-
-  <!-- <div class="ui grid">
-    <div class="three-wide-column">
-      <p class="joke" id="joke-1">What do you call a line of men<br> waiting to get haircuts?</p>
-      <p class="answer" id="answer-1">A barberqueue</p>
-      <button class="ui primary button">Populate</button>
-      <p class="joke" id="joke-2">Where do pirates get their hooks?</p>
-      <p class="answer" id="answer-2">Second hand stores</p>
-      <button class="ui primary button">Populate</button>
-
-      <p class="joke" id="joke-3">I just broke up with my mathematician girlfriend,</p>
-      <p class="answer" id="answer-3">She was obsessed with an ex</p>
-      <button class="ui primary button">Populate</button>
-    </div>
-  </div> -->
-  <!-- <div class="ui stackable five very relaxed grid container">
-
-        <div class="one wide column"></div>
-        <div class="six wide column center aligned">
-          <p>The dad joke of yesteryears..<br> i mean yesterday</p>
-          <button class="ui inverted orange basic button">Yesterdays joke</button>
-        </div>
-        <div class="one wide column"></div>
-        <div class="four wide column center aligned">
-          <h2><span>HOT</span> off the press!</h2>
-          <img class="ui fluid image" src="./assets/images/unnamed.png" width="fluid">
+        <h1 class="sub-font">CHOOSE A LANGUAGE</h1>
+        <div class="select">
+          <select name="languages" id="languages">
+            <!-- <option class="placeholder" label="Select Your Language"></option> -->
+            <option class="language-button font" label="es">Spanish</option>
+            <option class="language-button" label="fr">French</option>
+            <option class="language-button" label="de">German</option>
+            <option class="language-button" label="zh-TW">Chinese</option>
+            <!-- <div class="hidden divider"></div> -->
+          </select>
         </div>
       </div>
+
     </div>
+  </div>
+  </div>
+  </div>
 
-    <div class="ui hidden divider"></div> -->
 
-
-  <!-- <div class="ui grid yesterday">
-      <div class="six wide column center aligned"></div>
-      <p>The dad joke of yesteryears..<br> i mean yesterday</p>
-      <button class="ui inverted orange basic button">Populate</button>
-    </div> -->
-
-  <div class="ui stackable relaxed wide grid container">
+  <div class="ui stackable relaxed wide grid container font">
     <div class="five-wide-column-center-aligned yesHeader">
-      <h2 class="yesjoke">Do you want to see the joke of Yesteryears..<br> I mean Yesterday?</h2>
-      <p id="yesterdaysJoke">Joke</p>
+      <h2 class="yesjoke jokefont">TRAVEL BACK IN TIME<br>TRANSLATE YESTERDAY'S JOKE</h2>
+      <p id="yesterdaysJoke"><strong>Joke</strong></p>
+      <p id="yesterdaysAnswer"><strong>Answer</strong></p>
       <button class="ui basic button">Click Here</button>
-      <div ></div>
+      <div></div>
     </div>
+  </div>
+
+  <!-- <div class="ui grid"> -->
+  <div class="ui one column wide grid">
+    <div class="morejokes jokefont"><strong>MORE JOKES TO TRANSLATE</strong></div>
+    <div class="ui hidden divider"></div>
+  </div>
+
+  <div class="ui stackable three relaxed wide grid container">
+    <div class="five-wide-column-center-aligned">
+      <p class="joke font" id="joke-2">What do you call a line of men waiting to get haircuts?</p>
+      <p class="answer" id="joke-3">A barberqueue</p>
+      <button class="ui basic button populate">Populate</button>
+    </div>
+    <div class="five-wide-column-center-aligned">
+      <p class="joke center aligned font" id="joke-4">Where do pirates get their hooks?</p>
+      <p class="answer" id="joke-5">Second hand stores</p>
+      <button class="ui basic button populate">Populate</button>
+    </div>
+    <div class="five-wide-column-center-aligned">
+      <p class="joke center aligned font" id="joke-6">I just broke up with my mathematician girlfriend,</p>
+      <p class="answer center aligned" id="joke-7">She was obsessed with an ex</p>
+      <button class="ui basic button populate">Populate</button>
     </div>
 
-    <!-- <div class="ui grid"> -->
-      <div class="ui one column wide grid">
-      <div class="morejokes"> More Jokes to Translate</div>
-      <div class="ui hidden divider"></div>
-    </div>
+  </div>
 
-    <div class="ui stackable three relaxed wide grid container">
-      <div class="five-wide-column-center-aligned">
-        <p class="joke" id="joke-2">What do you call a line of men waiting to get haircuts?</p>
-        <p class="answer" id="joke-3">A barberqueue</p>
-        <button class="ui basic button populate">Populate</button>
-      </div>
-      <div class="five-wide-column-center-aligned">
-        <p class="joke center aligned" id="joke-4">Where do pirates get their hooks?</p>
-        <p class="answer" id="joke-5">Second hand stores</p>
-        <button class="ui basic button populate">Populate</button>
-      </div>
-      <div class="five-wide-column-center-aligned">
-        <p class="joke center aligned" id="joke-6">I just broke up with my mathematician girlfriend,</p>
-        <p class="answer center aligned" id="joke-7">She was obsessed with an ex</p>
-        <button class="ui basic button populate">Populate</button>
-      </div>
-
-    </div>  
-
-      <!-- </div>
+  <!-- </div>
   </div>
 
   <div class="ui grid">
@@ -190,10 +122,10 @@
         <p class="joke center aligned" id="joke-6">She was obsessed with an ex</p>
         <button class="ui inverted orange basic button">Populate</button>
       </div> -->
-    </div>
   </div>
   </div>
-    <!-- <div class="one wide column"></div>
+  </div>
+  <!-- <div class="one wide column"></div>
     <div class="four wide column center aligned bgtesting">
       <h2>Speak <span>AND</span> look the part!</h2>
       <img class="ui fluid image" src="./assets/images/unnamed.png" width="fluid">
