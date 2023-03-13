@@ -8,7 +8,8 @@ let toBeTransArr = [
   "it will work",
 ];
 let translationArr = [
-  "joke 1",
+  "joke1",
+  "answer1",
   "joke2",
   "answer2",
   "joke3",
@@ -18,6 +19,7 @@ let translationArr = [
 ];
 let langButtArr = document.getElementsByClassName("language-button");
 let dropdownSelect = document.getElementById("languages");
+let populateButts = document.getElementsByClassName("populate")
 
 for (let indx = 0; indx < jokeArr.length; indx++) {
   const element = jokeArr[indx];
@@ -57,6 +59,62 @@ const settings = {
 // }
 // testDadJoke();
 
+function checkTime(){
+  //this should be in an interval that checks perhaps every 5-10 seconds
+  //access local storage to get yesterdays joke time
+  // have it store month, day, hour and minute in an array
+  // set each index on the array to the time it corresponds to, month, day, hour, minute
+  // new month is like a new day, but will ruin us checking if current day > local stored day as current day will be a lower number,
+  // so if month is greater go to check if hour is greater, then minute. 
+  // if month isnt greater, check day, if day isnt greater, a day hasnt passed. 
+  // if day is is greater, check hour, if hour is greater, a day has passed.
+  //if hour equal, check minute, if minute is greater a day has passed, if either are not greater, a day has not passed. 
+} // if this returns true, change the joke of the day by calling the dad joke api again. 
+
+for (let index = 0; index < populateButts.length; index++) {
+  let answer = ''
+  let joke = ''
+  let jotdPunchline = document.getElementById('joke-0')
+  let jotdAns = document.getElementById('joke-1')
+  const element = populateButts[index];
+  element.addEventListener("click", function(){
+    console.log(element, index)
+    if (index === 0){
+      joke = document.getElementById('joke-2')
+      answer = document.getElementById('joke-3')
+      var currentJotdPl = jotdPunchline.innerText
+      var currentJotdAns = jotdAns.innerText
+      jotdPunchline.innerText = joke.innerText
+      jotdAns.innerText = answer.innerText
+      console.log (currentJotdAns, currentJotdPl)
+      joke.innerText = currentJotdPl
+      answer.innerText = currentJotdAns
+    } else if (index === 1){
+      joke = document.getElementById('joke-4')
+      answer = document.getElementById('joke-5')
+      var currentJotdPl = jotdPunchline.innerText
+      var currentJotdAns = jotdAns.innerText
+      jotdPunchline.innerText = joke.innerText
+      jotdAns.innerText = answer.innerText
+      console.log (currentJotdAns, currentJotdPl)
+      joke.innerText = currentJotdPl
+      answer.innerText = currentJotdAns
+    } else {
+    joke = document.getElementById('joke-6')
+    answer = document.getElementById('joke-7')
+    var currentJotdPl = jotdPunchline.innerText
+    var currentJotdAns = jotdAns.innerText
+    jotdPunchline.innerText = joke.innerText
+    jotdAns.innerText = answer.innerText
+    console.log (currentJotdAns, currentJotdPl)
+    joke.innerText = currentJotdPl
+    answer.innerText = currentJotdAns
+    }
+  })
+}
+
+
+
 function testGoogleTranslate() {
   fetch(
     "https://google-translate1.p.rapidapi.com/language/translate/v2/detect",
@@ -69,14 +127,15 @@ function testGoogleTranslate() {
 // testGoogleTranslate();
 
 function makestr() {
-  for (let i = 0; i < toBeTransArr.length; i++) {
-    const element = toBeTransArr[i];
-    if (i < toBeTransArr.length - 1) {
-      transStr = transStr + element + " |";
-    } else {
-      transStr = transStr + element;
-    } 
-  }
+  transStr = toBeTransArr.join(" | ")
+  // for (let i = 0; i < toBeTransArr.length; i++) {
+  //   const element = toBeTransArr[i];
+  //   if (i < toBeTransArr.length - 1) {
+  //     transStr = transStr + element + " |";
+  //   } else {
+  //     transStr = transStr + element;
+  //   } 
+  // }
   console.log(transStr);
 }
 // try seperating by Array.join()
