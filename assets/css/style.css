@@ -1,10 +1,29 @@
 * {
   box-sizing: border-box;
+  font-family: 'Petit Formal Script', cursive;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
   background-color: rgb(214, 192, 151);
+  font-family: 'Petit Formal Script', cursive;
+  font-family: 'Raleway', sans-serif;
 }
+
+.item {
+  font-family: 'Petit Formal Script', cursive;
+font-family: 'Raleway', sans-serif;
+}
+
+.joke {
+  font-family: 'Petit Formal Script', cursive;
+font-family: 'Raleway', sans-serif;
+}
+
+.one {
+  border-top: 3px solid black;
+}
+
 
 .specialfont {
   text-decoration: underline;
@@ -36,25 +55,10 @@ body {
   padding: 20px;
 }
 
-.segment {
-  color:rgb(126, 26, 26)
-}
 
 .men {
   border: 4px solid black;
 }
-
-/* .pictures-container {
-  display: flex;
-  flex-wrap: nowrap;
-  border-bottom: 3px solid black;
-  width: 300%;
-  background-color: rgb(180, 131, 40);
-  margin-top: 5px;
-  margin-bottom: 20px;
-  justify-content: center;
-  padding: 50px;
-} */
 
 .main-3 {
   border: 4px solid black;
@@ -81,7 +85,7 @@ body {
 }
 
 .JOTD-header {
-  color:rgb(126, 26, 26);
+  color: rgb(126, 26, 26);
 }
 
 .yesterday {
@@ -89,4 +93,38 @@ body {
   flex-direction: column;
 }
 
+select {
+  /* outline: 0; */
+  width: 100%;
+  height: 100%;
+  color: black;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.select {
+  position: relative;
+  display: block;
+  /* width: 15em;
+  height: 2em; */
+  line-height: 6;
+  /* overflow: hidden; */
+  border-radius: .25em;
+  padding-bottom: 10px;
+}
+
+.morejokes {
+  margin: auto;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 30px;
+  /* border: 2px solid black; */
+  padding: 20px;
+}
+
+.bottomBorder {
+  border-bottom: 3px solid black;
+}
 
