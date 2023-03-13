@@ -1,6 +1,7 @@
+
 let transStr = "";
-let jokeArr = document.getElementsByClassName("joke");
-console.log(jokeArr);
+let jokePlacementArr = document.getElementsByClassName("joke");
+console.log(jokePlacementArr);
 let toBeTransArr = [
   "i want these",
   "strings to",
@@ -19,11 +20,190 @@ let translationArr = [
 ];
 let langButtArr = document.getElementsByClassName("language-button");
 let dropdownSelect = document.getElementById("languages");
-let populateButts = document.getElementsByClassName("populate")
+let populateButts = document.getElementsByClassName("populate");
 
-for (let indx = 0; indx < jokeArr.length; indx++) {
-  const element = jokeArr[indx];
-  toBeTransArr[indx] = jokeArr[indx].innerHTML;
+jokeArr = [
+
+"What do you call a line of men waiting to get haircuts?",
+
+"Where do pirates get their hooks?",
+
+"I just broke up with my mathematician girlfriend.",
+
+"What does a baby computer call his father?",
+
+"What do you call a beehive without an exit?",
+
+"Did you know that the first french fries weren\'t cooked in France?",
+
+"I asked my date to meet me at the gym but she never showed up.",
+
+"To whoever stole my copy of Microsoft Office, I will find you.",
+
+"What\'s Forrest Gump\'s password?",
+
+"If prisoners could take their own mug shots…",
+
+"What is a guitar player\'s favorite Italian food?",
+
+"How does cereal pay its bills?",
+
+"Have you heard about the restaurant on the moon?",
+
+"I don\'t trust stairs.",
+
+"Never date a tennis player.",
+
+"What\'s a lawyer\'s favorite drink?",
+
+"I used to hate facial hair,",
+
+"I don\'t get why bakers aren\'t wealthier.",
+
+"I hate it when people say age is only a number.",
+
+"What's an astronaut\'s favorite part of the computer?",
+
+"Today I\'m attaching a light to the ceiling,",
+
+"I just applied for a job down at the diner.",
+
+"Why was 2019 afraid of 2020?",
+
+"What has five toes and isn't your foot?",
+
+"When I was a kid, my mother told me I could be anyone I wanted to be.",
+
+"What did one plate whisper to the other plate?",
+
+"Stop looking for the perfect match;",
+
+"Did you hear the rumor about butter?",
+
+"What does a nosey pepper do?",
+
+"What concert would cost only 45 cents?",
+
+"How do you deal with a fear of speed bumps?",
+
+"What did the baby corn say to the mama corn?",
+
+"What do you call two monkeys who share an Amazon Prime account?",
+
+"Why did the football coach go to the bank?",
+
+"Why can\'t a leopard hide?",
+
+"Can February March?",
+
+"How you fix a broken pumpkin?",
+
+"Why are fish so smart?",
+
+"What do houses wear?",
+
+"I\'m so good at sleeping",
+
+"It\'s easy to convince ladies not to eat Tide Pods,",
+
+"If two vegetarians get in an argument,",
+
+]
+
+answerArr = [
+
+"A barberqueue.",
+
+"Second hand stores.",
+
+"She was obsessed with an X.",
+
+"Data.",
+
+"Unbelievable.",
+
+"They were cooked in Greece.",
+
+"I guess the two of us aren't going to work out.",
+
+"You have my Word.",
+
+"1forrest1.",
+
+"They\'d be called cellfies.",
+
+"Strum-boli.",
+
+"With Chex.",
+
+"Great food, no atmosphere.",
+
+"They\'re always up to something.",
+
+"Love means nothing to them.",
+
+"Subpoena colada.",
+
+"but then it grew on me.",
+
+"They make so much dough.",
+
+"Age is clearly a word.",
+
+"The Space Bar.",
+
+"but I\'m afraid I\'ll probably screw it up.",
+
+"I told them I really bring a lot to the table.",
+
+"Because they had a fight and 2021.",
+
+"My foot.",
+
+"Turns out, identity theft is a crime.",
+
+"Dinner is on me.",
+
+"use a lighter.",
+
+"Well, I\'m not going to go spreading it!",
+
+"It gets jalapeño business.",
+
+"50 Cent featuring Nickelback!",
+
+"You slowly get over it.",
+
+"Where\'s popcorn?",
+
+"Prime mates.",
+
+"To get his quarter back.",
+
+"He\'s always spotted.",
+
+"No, but April May!",
+
+"With a pumpkin patch!",
+
+"They live in schools!",
+
+"An address.",
+
+"Loafers.",
+
+"that I do it with my eyes closed.",
+
+"but harder to deter gents.",
+
+"is it still called beef?",
+
+]
+
+
+for (let indx = 0; indx < jokePlacementArr.length; indx++) {
+  const element = jokePlacementArr[indx];
+  toBeTransArr[indx] = jokePlacementArr[indx].innerHTML;
   // console.log(toBeTransArr);
 }
 const settings = {
