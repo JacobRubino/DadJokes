@@ -1,23 +1,11 @@
 * {
   box-sizing: border-box;
-  font-family: 'Petit Formal Script', cursive;
-  font-family: 'Raleway', sans-serif;
+  /* @pageFont: font-family: 'Petit Formal Script', cursive;
+  font-family: 'Raleway', sans-serif; */
 }
 
 body {
   background-color: rgb(214, 192, 151);
-  font-family: 'Petit Formal Script', cursive;
-  font-family: 'Raleway', sans-serif;
-}
-
-.item {
-  font-family: 'Petit Formal Script', cursive;
-font-family: 'Raleway', sans-serif;
-}
-
-.joke {
-  font-family: 'Petit Formal Script', cursive;
-font-family: 'Raleway', sans-serif;
 }
 
 .one {
@@ -86,6 +74,8 @@ font-family: 'Raleway', sans-serif;
 
 .JOTD-header {
   color: rgb(126, 26, 26);
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .yesterday {
@@ -119,11 +109,32 @@ select {
   display: inline-flex;
   flex-direction: column;
   text-align: center;
-  font-size: 30px;
-  /* border: 2px solid black; */
-  padding: 20px;
+  padding: 60px;
 }
 
 .bottomBorder {
   border-bottom: 3px solid black;
+}
+
+.font {
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(126, 26, 26);
+}
+
+.nav-font {
+  font-size: 23px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.sub-font {
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.jokefont {
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+
 }
