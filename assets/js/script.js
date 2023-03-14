@@ -335,6 +335,8 @@ function callJoke() {
 // testDadJoke();
 
 function setJotd(){
+  localStorage.setItem('jotdSetup', "I absolutely love and admire the unintellignt, overweight, yellowish-orange skinned man with the bad combover covering his baldness who has had his finger on the nuclear button all these years...")
+  localStorage.setItem('jotdPL', "Wait... I was talking about Homer Simpson, who did you think I meant?")
   let setup = localStorage.getItem('jotdSetup')
   let joPl = localStorage.getItem('jotdPL')
   let jotdSetup = document.getElementById('joke-0')
@@ -396,7 +398,6 @@ function checkTime() {
 
 
 checkTime();
-
 for (let index = 0; index < populateButts.length; index++) {
   let answer = "";
   let joke = "";
@@ -404,8 +405,6 @@ for (let index = 0; index < populateButts.length; index++) {
   let jotdAns = document.getElementById("joke-1");
   const element = populateButts[index];
   element.addEventListener("click", function () {
-    localStorage.setItem('jotdSetup', "I absolutely love and admire the unintellignt, overweight, yellowish-orange skinned man with the bad combover covering his baldness who has had his finger on the nuclear button all these years...")
-    localStorage.setItem('jotdPL', "Wait... I was talking about Homer Simpson, who did you think I meant?")
     // console.log(element, index);
     if (index === 0) {
       joke = document.getElementById("joke-2");
@@ -471,7 +470,7 @@ function validate() {
 
 function fillJokes() {
   let ind1 = Math.floor(Math.random() * 14);
-  let ind2 = Math.floor(Math.random() * (14 - 14) + 14);
+  let ind2 = Math.floor(Math.random() * (15 - 14) + 14);
   let ind3 = Math.floor(Math.random() * (14 - 28) + 28);
   let joke1 = document.getElementById("joke-2");
   let ans1 = document.getElementById("joke-3");
