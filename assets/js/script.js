@@ -521,6 +521,7 @@ $(document).ready(function () {
 
 // fetchTranslation()
 function fetchTranslation() {
+  callJoke()
   $.ajax(settings).done(function (response) {
     console.log(response);
     var translatedText = response.data.translations[0].translatedText;
@@ -543,5 +544,6 @@ function updatePlaceholders(updateString) {
     jokey.innerText = element;
   }
 }
-
+localStorage.setItem('jotdSetup', "I absolutely love and admire the unintellignt, overweight, yellowish-orange skinned man with the bad combover covering his baldness who has had his finger on the nuclear button all these years...")
+localStorage.setItem('jotdPL', "Wait... I was talking about Homer Simpson, who did you think I meant?")
 setInterval(checkTime, 5000);
