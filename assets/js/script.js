@@ -404,6 +404,8 @@ for (let index = 0; index < populateButts.length; index++) {
   let jotdAns = document.getElementById("joke-1");
   const element = populateButts[index];
   element.addEventListener("click", function () {
+    localStorage.setItem('jotdSetup', "I absolutely love and admire the unintellignt, overweight, yellowish-orange skinned man with the bad combover covering his baldness who has had his finger on the nuclear button all these years...")
+    localStorage.setItem('jotdPL', "Wait... I was talking about Homer Simpson, who did you think I meant?")
     // console.log(element, index);
     if (index === 0) {
       joke = document.getElementById("joke-2");
@@ -544,6 +546,5 @@ function updatePlaceholders(updateString) {
     jokey.innerText = element;
   }
 }
-localStorage.setItem('jotdSetup', "I absolutely love and admire the unintellignt, overweight, yellowish-orange skinned man with the bad combover covering his baldness who has had his finger on the nuclear button all these years...")
-localStorage.setItem('jotdPL', "Wait... I was talking about Homer Simpson, who did you think I meant?")
+
 setInterval(checkTime, 5000);
