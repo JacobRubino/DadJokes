@@ -1,4 +1,3 @@
-
 let transStr = "";
 let jokePlacementArr = document.getElementsByClassName("joke");
 console.log(jokePlacementArr);
@@ -42,7 +41,7 @@ const jotdJokeArr = [
   "I don’t trust those trees.",
 
   "How do you get a squirrel to like you?",
-]
+];
 
 const JotdAnswerArr = [
   "Deviled Eggs",
@@ -64,192 +63,184 @@ const JotdAnswerArr = [
   "They seem kind of shady.",
 
   "Act like a nut.",
-]
+];
 
 const jokeArr = [
+  "What do you call a line of men waiting to get haircuts?",
 
-"What do you call a line of men waiting to get haircuts?",
+  "Where do pirates get their hooks?",
 
-"Where do pirates get their hooks?",
+  "I just broke up with my mathematician girlfriend.",
 
-"I just broke up with my mathematician girlfriend.",
+  "What does a baby computer call his father?",
 
-"What does a baby computer call his father?",
+  "What do you call a beehive without an exit?",
 
-"What do you call a beehive without an exit?",
+  "Did you know that the first french fries weren't cooked in France?",
 
-"Did you know that the first french fries weren\'t cooked in France?",
+  "I asked my date to meet me at the gym but she never showed up.",
 
-"I asked my date to meet me at the gym but she never showed up.",
+  "To whoever stole my copy of Microsoft Office, I will find you.",
 
-"To whoever stole my copy of Microsoft Office, I will find you.",
+  "What's Forrest Gump's password?",
 
-"What\'s Forrest Gump\'s password?",
+  "If prisoners could take their own mug shots…",
 
-"If prisoners could take their own mug shots…",
+  "What is a guitar player's favorite Italian food?",
 
-"What is a guitar player\'s favorite Italian food?",
+  "How does cereal pay its bills?",
 
-"How does cereal pay its bills?",
+  "Have you heard about the restaurant on the moon?",
 
-"Have you heard about the restaurant on the moon?",
+  "I don't trust stairs.",
 
-"I don\'t trust stairs.",
+  "Never date a tennis player.",
 
-"Never date a tennis player.",
+  "What's a lawyer's favorite drink?",
 
-"What\'s a lawyer\'s favorite drink?",
+  "I used to hate facial hair,",
 
-"I used to hate facial hair,",
+  "I don't get why bakers aren't wealthier.",
 
-"I don\'t get why bakers aren\'t wealthier.",
+  "I hate it when people say age is only a number.",
 
-"I hate it when people say age is only a number.",
+  "What's an astronaut's favorite part of the computer?",
 
-"What's an astronaut\'s favorite part of the computer?",
+  "Today I'm attaching a light to the ceiling,",
 
-"Today I\'m attaching a light to the ceiling,",
+  "I just applied for a job down at the diner.",
 
-"I just applied for a job down at the diner.",
+  "Why was 2019 afraid of 2020?",
 
-"Why was 2019 afraid of 2020?",
+  "What has five toes and isn't your foot?",
 
-"What has five toes and isn't your foot?",
+  "When I was a kid, my mother told me I could be anyone I wanted to be.",
 
-"When I was a kid, my mother told me I could be anyone I wanted to be.",
+  "What did one plate whisper to the other plate?",
 
-"What did one plate whisper to the other plate?",
+  "Stop looking for the perfect match;",
 
-"Stop looking for the perfect match;",
+  "Did you hear the rumor about butter?",
 
-"Did you hear the rumor about butter?",
+  "What does a nosey pepper do?",
 
-"What does a nosey pepper do?",
+  "What concert would cost only 45 cents?",
 
-"What concert would cost only 45 cents?",
+  "How do you deal with a fear of speed bumps?",
 
-"How do you deal with a fear of speed bumps?",
+  "What did the baby corn say to the mama corn?",
 
-"What did the baby corn say to the mama corn?",
+  "What do you call two monkeys who share an Amazon Prime account?",
 
-"What do you call two monkeys who share an Amazon Prime account?",
+  "Why did the football coach go to the bank?",
 
-"Why did the football coach go to the bank?",
+  "Why can't a leopard hide?",
 
-"Why can\'t a leopard hide?",
+  "Can February March?",
 
-"Can February March?",
+  "How you fix a broken pumpkin?",
 
-"How you fix a broken pumpkin?",
+  "Why are fish so smart?",
 
-"Why are fish so smart?",
+  "What do houses wear?",
 
-"What do houses wear?",
+  "I'm so good at sleeping",
 
-"I\'m so good at sleeping",
+  "It's easy to convince ladies not to eat Tide Pods,",
 
-"It\'s easy to convince ladies not to eat Tide Pods,",
-
-"If two vegetarians get in an argument,",
-
-]
-
+  "If two vegetarians get in an argument,",
+];
+localStorage.setItem("yesSet", "If two vegetarians get in an argument,")
+localStorage.setItem("yesJoke", "is it still called beef?")
 const answerArr = [
+  "A barberqueue.",
 
-"A barberqueue.",
+  "Second hand stores.",
 
-"Second hand stores.",
+  "She was obsessed with an X.",
 
-"She was obsessed with an X.",
+  "Data.",
 
-"Data.",
+  "Unbelievable.",
 
-"Unbelievable.",
+  "They were cooked in Greece.",
 
-"They were cooked in Greece.",
+  "I guess the two of us aren't going to work out.",
 
-"I guess the two of us aren't going to work out.",
+  "You have my Word.",
 
-"You have my Word.",
+  "1forrest1.",
 
-"1forrest1.",
+  "They'd be called cellfies.",
 
-"They\'d be called cellfies.",
+  "Strum-boli.",
 
-"Strum-boli.",
+  "With Chex.",
 
-"With Chex.",
+  "Great food, no atmosphere.",
 
-"Great food, no atmosphere.",
+  "They're always up to something.",
 
-"They\'re always up to something.",
+  "Love means nothing to them.",
 
-"Love means nothing to them.",
+  "Subpoena colada.",
 
-"Subpoena colada.",
+  "but then it grew on me.",
 
-"but then it grew on me.",
+  "They make so much dough.",
 
-"They make so much dough.",
+  "Age is clearly a word.",
 
-"Age is clearly a word.",
+  "The Space Bar.",
 
-"The Space Bar.",
+  "but I'm afraid I'll probably screw it up.",
 
-"but I\'m afraid I\'ll probably screw it up.",
+  "I told them I really bring a lot to the table.",
 
-"I told them I really bring a lot to the table.",
+  "Because they had a fight and 2021.",
 
-"Because they had a fight and 2021.",
+  "My foot.",
 
-"My foot.",
+  "Turns out, identity theft is a crime.",
 
-"Turns out, identity theft is a crime.",
+  "Dinner is on me.",
 
-"Dinner is on me.",
+  "use a lighter.",
 
-"use a lighter.",
+  "Well, I'm not going to go spreading it!",
 
-"Well, I\'m not going to go spreading it!",
+  "It gets jalapeño business.",
 
-"It gets jalapeño business.",
+  "50 Cent featuring Nickelback!",
 
-"50 Cent featuring Nickelback!",
+  "You slowly get over it.",
 
-"You slowly get over it.",
+  "Where's popcorn?",
 
-"Where\'s popcorn?",
+  "Prime mates.",
 
-"Prime mates.",
+  "To get his quarter back.",
 
-"To get his quarter back.",
+  "He's always spotted.",
 
-"He\'s always spotted.",
+  "No, but April May!",
 
-"No, but April May!",
+  "With a pumpkin patch!",
 
-"With a pumpkin patch!",
+  "They live in schools!",
 
-"They live in schools!",
+  "An address.",
 
-"An address.",
+  "Loafers.",
 
-"Loafers.",
+  "that I do it with my eyes closed.",
 
-"that I do it with my eyes closed.",
+  "but harder to deter gents.",
 
-"but harder to deter gents.",
-
-"is it still called beef?",
-
-]
+  "is it still called beef?",
+];
 
 
-for (let indx = 0; indx < jokePlacementArr.length; indx++) {
-  const element = jokePlacementArr[indx];
-  toBeTransArr[indx] = jokePlacementArr[indx].innerHTML;
-  // console.log(toBeTransArr);
-}
 const settings = {
   async: true,
   crossDomain: true,
@@ -257,7 +248,7 @@ const settings = {
   method: "POST",
   headers: {
     "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-    // "x-rapidapi-key": "a2f926190dmsh6f066a73d9de2acp186a01jsn9e155a373bf2",
+    "x-rapidapi-key": "bac07ccaaamsh2fffebc888fd67dp1f1e3djsn0428a5223bad",
     "content-type": "application/x-www-form-urlencoded",
   },
   data: {
@@ -268,74 +259,64 @@ const settings = {
 };
 
 const options = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    // 'X-RapidAPI-Key': '46aa698a57msh67443578dd57e7fp1794acjsnfbdded0b23d9',
-    'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
-  }
+    "X-RapidAPI-Key": "efa384be52msh350df4030dbda55p1b1a9ejsnbf7edfdb014d",
+    "X-RapidAPI-Host": "dad-jokes.p.rapidapi.com",
+  },
 };
 
 function testDadJoke() {
-  return fetch('https://dad-jokes.p.rapidapi.com/random/joke', options)
-    .then(response => response.json())
-    // .then(response => console.log(response))
-    .then(data => data)
-    .catch(err => console.error(err));
-
+  return (
+    fetch("https://dad-jokes.p.rapidapi.com/random/joke", options)
+      .then((response) => response.json())
+      // .then(response => console.log(response))
+      .then((data) => data)
+      .catch((err) => console.error(err))
+  );
 }
 
 function createJokeElement() {
   for (let index = 0; index < dadJokeAr.length; index++) {
     const jokeElement = dadJokeAr[index];
-
-
   }
 }
 
-let dadJokeAr = []
-let dadpunchlineAr = []
+let dadJokeAr = [];
+let dadpunchlineAr = [];
 
-document.getElementById('.ui button')
+document.getElementById(".ui button");
 
 function callJoke() {
-  var djSetup = document.getElementById('joke-0')
-  var djPunchline = document.getElementById('joke-1')
-  djSetup.innerText = 'Loading Joke'
-  djPunchline.innerText = ''
+  var djSetup = document.getElementById("joke-0");
+  var djPunchline = document.getElementById("joke-1");
+  djSetup.innerText = "Loading Joke";
+  djPunchline.innerText = "";
   testDadJoke().then((data) => {
-    console.log (data)
+    console.log(data);
     if (data.body[0].NSFW == false) {
       const joke = data.body[0].setup;
       const punchline = data.body[0].punchline;
       dadJokeAr.unshift(joke);
-      console.log(joke, punchline)
-      djSetup.innerText = joke
-      djPunchline.innerText = punchline
+      console.log(joke, punchline);
+      djSetup.innerText = joke;
+      djPunchline.innerText = punchline;
     } else {
-      JIndx = Math.floor(Math.random() * 10)
-      djSetup.innerText = jotdJokeArr[JIndx]
-      djPunchline.innerText = JotdAnswerArr[JIndx]
+      JIndx = Math.floor(Math.random() * 10);
+      djSetup.innerText = jotdJokeArr[JIndx];
+      djPunchline.innerText = JotdAnswerArr[JIndx];
     }
-  })
+  });
 }
 
-  // for (let index = 0; index < dadJokeAr.length; index++) {
-  //     const jokeElement = dadJokeAr[index]; 
-  //     const heading = document.createElement('h1'); 
-  //     const jokediv = document.getElementById('joke');
-  //    heading.innerHTML = jokeElement;
-  //    heading.className = 'dadjoke'
-  //    jokediv.appendChild(heading);
-  //    heading.id = `joke${index}`
-      
-     
-  
-
-
-
-
-
-
+// for (let index = 0; index < dadJokeAr.length; index++) {
+//     const jokeElement = dadJokeAr[index];
+//     const heading = document.createElement('h1');
+//     const jokediv = document.getElementById('joke');
+//    heading.innerHTML = jokeElement;
+//    heading.className = 'dadjoke'
+//    jokediv.appendChild(heading);
+//    heading.id = `joke${index}`
 
 // const options = {
 //     method: 'GET',
@@ -353,100 +334,120 @@ function callJoke() {
 // }
 // testDadJoke();
 
-function checkTime() {
-  let nowMonth  = Number(dayjs().format('M'))
-  let nowDay = Number(dayjs().format('D'))
-  let nowHour = Number(dayjs().format('H'))
-  let nowMinute = Number(dayjs().format('m'))
-  console.log(nowMonth, nowDay, nowHour, nowMinute)
-  let stored_time = JSON.parse(localStorage.getItem('dateArr'))
-  if (stored_time == null){
-    storeThis = JSON.stringify([nowMonth, nowDay, nowHour, nowMinute])
-    localStorage.setItem('dateArr', storeThis)
-    console.log(storeThis)
-  } else{ 
-    console.log(stored_time)
-    let storeMonth = Number(stored_time[0])
-    let storeDay = Number(stored_time[1])
-    let storeHour = Number(stored_time[2])
-    let storeMinute = Number(stored_time[3])
-    console.log(storeMonth, storeDay, storeHour, storeMinute)
-    if (nowMonth > storeMonth){
-      if(nowHour >= storeHour){
-        if (nowMinute> storeMinute){
-          console.log("joke should change")
-          // localStorage.setItem('JOTD', set previous joke here)
-          // callJoke()
-        } else{ console.log("MG,HG/E,ML")}
-      } else {console.log("MG, HL")}
-    } else if (nowDay > storeDay) {
-      if(nowHour >= storeHour){
-        if (nowMinute> storeMinute){
-          console.log('joke should change')
-          // localStorage.setItem('JOTD', set previous joke here )
-          // callJoke()
-    } else {console.log("MS, DG, HG/E , ML ")}
-  } else {console.log("MS, DG, HL")}
-} else { console.log ("MS, DL")}
-  //this should be in an interval that checks perhaps every 5-10 seconds
-  //access local storage to get yesterdays joke time
-  // have it store month, day, hour and minute in an array
-  // set each index on the array to the time it corresponds to, month, day, hour, minute
-  // new month is like a new day, but will ruin us checking if current day > local stored day as current day will be a lower number,
-  // so if month is greater go to check if hour is greater, then minute. 
-  // if month isnt greater, check day, if day isnt greater, a day hasnt passed. 
-  // if day is is greater, check hour, if hour is greater, a day has passed.
-  //if hour equal, check minute, if minute is greater a day has passed, if either are not greater, a day has not passed. 
-  }
-
-
-} // if this returns true, change the joke of the day by calling the dad joke api again. 
-
-checkTime()
-
-for (let index = 0; index < populateButts.length; index++) {
-  let answer = ''
-  let joke = ''
-  let jotdPunchline = document.getElementById('joke-0')
-  let jotdAns = document.getElementById('joke-1')
-  const element = populateButts[index];
-  element.addEventListener("click", function () {
-    console.log(element, index)
-    if (index === 0) {
-      joke = document.getElementById('joke-2')
-      answer = document.getElementById('joke-3')
-      var currentJotdPl = jotdPunchline.innerText
-      var currentJotdAns = jotdAns.innerText
-      jotdPunchline.innerText = joke.innerText
-      jotdAns.innerText = answer.innerText
-      console.log(currentJotdAns, currentJotdPl)
-      joke.innerText = currentJotdPl
-      answer.innerText = currentJotdAns
-    } else if (index === 1) {
-      joke = document.getElementById('joke-4')
-      answer = document.getElementById('joke-5')
-      var currentJotdPl = jotdPunchline.innerText
-      var currentJotdAns = jotdAns.innerText
-      jotdPunchline.innerText = joke.innerText
-      jotdAns.innerText = answer.innerText
-      console.log(currentJotdAns, currentJotdPl)
-      joke.innerText = currentJotdPl
-      answer.innerText = currentJotdAns
-    } else {
-      joke = document.getElementById('joke-6')
-      answer = document.getElementById('joke-7')
-      var currentJotdPl = jotdPunchline.innerText
-      var currentJotdAns = jotdAns.innerText
-      jotdPunchline.innerText = joke.innerText
-      jotdAns.innerText = answer.innerText
-      console.log(currentJotdAns, currentJotdPl)
-      joke.innerText = currentJotdPl
-      answer.innerText = currentJotdAns
-    }
-  })
+function setJotd(){
+  let setup = localStorage.getItem('jotdSetup')
+  let joPl = localStorage.getItem('jotdPL')
+  let jotdSetup = document.getElementById('joke-0')
+  let jotdPls = document.getElementById('joke-1')
+  jotdSetup.innerText = setup
+  jotdPls.innerText = joPl
 }
 
+setJotd()
 
+function checkTime() {
+  let nowMonth = Number(dayjs().format("M"));
+  let nowDay = Number(dayjs().format("D"));
+  let nowHour = Number(dayjs().format("H"));
+  let nowMinute = Number(dayjs().format("m"));
+  console.log(nowMonth, nowDay, nowHour, nowMinute);
+  let stored_time = JSON.parse(localStorage.getItem("dateArr"));
+  if (stored_time == null) {
+    storeThis = JSON.stringify([nowMonth, nowDay, nowHour, nowMinute]);
+    localStorage.setItem("dateArr", storeThis);
+    console.log(storeThis);
+  } else {
+    console.log(stored_time);
+    let storeMonth = Number(stored_time[0]);
+    let storeDay = Number(stored_time[1]);
+    let storeHour = Number(stored_time[2]);
+    let storeMinute = Number(stored_time[3]);
+    console.log(storeMonth, storeDay, storeHour, storeMinute);
+    if (nowMonth > storeMonth) {
+      if (nowHour >= storeHour) {
+        if (nowMinute > storeMinute) {
+          console.log("joke should change");
+          callJoke()
+          // localStorage.setItem('JOTD', set new joke here Pl and setup, and set yesterdays joke as the current one)
+        } else {
+          console.log("MG,HG/E,ML");
+        }
+      } else {
+        console.log("MG, HL");
+      }
+    } else if (nowDay > storeDay) {
+      if (nowHour >= storeHour) {
+        if (nowMinute > storeMinute) {
+          console.log("joke should change");
+          // localStorage.setItem('JOTD', set new joke here Pl and setup, and set current as yesterdays joke )
+          callJoke()
+        } else {
+          console.log("MS, DG, HG/E , ML ");
+        }
+      } else {
+        console.log("MS, DG, HL");
+      }
+    } else {
+      console.log("MS, DL");
+    }
+
+    //this should be in an interval that checks perhaps every 5-10 seconds
+    //access local storage to get yesterdays joke time
+    // have it store month, day, hour and minute in an array
+    // set each index on the array to the time it corresponds to, month, day, hour, minute
+    // new month is like a new day, but will ruin us checking if current day > local stored day as current day will be a lower number,
+    // so if month is greater go to check if hour is greater, then minute.
+    // if month isnt greater, check day, if day isnt greater, a day hasnt passed.
+    // if day is is greater, check hour, if hour is greater, a day has passed.
+    //if hour equal, check minute, if minute is greater a day has passed, if either are not greater, a day has not passed.
+  }
+} // if this returns true, change the joke of the day by calling the dad joke api again.
+
+
+
+checkTime();
+
+for (let index = 0; index < populateButts.length; index++) {
+  let answer = "";
+  let joke = "";
+  let jotdPunchline = document.getElementById("joke-0");
+  let jotdAns = document.getElementById("joke-1");
+  const element = populateButts[index];
+  element.addEventListener("click", function () {
+    console.log(element, index);
+    if (index === 0) {
+      joke = document.getElementById("joke-2");
+      answer = document.getElementById("joke-3");
+      var currentJotdPl = jotdPunchline.innerText;
+      var currentJotdAns = jotdAns.innerText;
+      jotdPunchline.innerText = joke.innerText;
+      jotdAns.innerText = answer.innerText;
+      console.log(currentJotdAns, currentJotdPl);
+      joke.innerText = currentJotdPl;
+      answer.innerText = currentJotdAns;
+    } else if (index === 1) {
+      joke = document.getElementById("joke-4");
+      answer = document.getElementById("joke-5");
+      var currentJotdPl = jotdPunchline.innerText;
+      var currentJotdAns = jotdAns.innerText;
+      jotdPunchline.innerText = joke.innerText;
+      jotdAns.innerText = answer.innerText;
+      console.log(currentJotdAns, currentJotdPl);
+      joke.innerText = currentJotdPl;
+      answer.innerText = currentJotdAns;
+    } else {
+      joke = document.getElementById("joke-6");
+      answer = document.getElementById("joke-7");
+      var currentJotdPl = jotdPunchline.innerText;
+      var currentJotdAns = jotdAns.innerText;
+      jotdPunchline.innerText = joke.innerText;
+      jotdAns.innerText = answer.innerText;
+      console.log(currentJotdAns, currentJotdPl);
+      joke.innerText = currentJotdPl;
+      answer.innerText = currentJotdAns;
+    }
+  });
+}
 
 function testGoogleTranslate() {
   fetch(
@@ -460,8 +461,9 @@ function testGoogleTranslate() {
 // testGoogleTranslate();
 
 function makestr() {
-  transStr = toBeTransArr.join(" | ")
+  transStr = toBeTransArr.join(" | ");
   console.log(transStr);
+  settings.data.q = transStr
 }
 // try seperating by Array.join()
 
@@ -475,35 +477,49 @@ function validate() {
   }
 }
 
-function fillJokes(){
-  let ind1 = Math.floor(Math.random()*(14))
-  let ind2 = Math.floor(Math.random()*(14-14) + 14)
-  let ind3 = Math.floor(Math.random()*(14-28) + 28)
-  let joke1 = document.getElementById("joke-2")
-  let ans1 = document.getElementById("joke-3")
-  let joke2 = document.getElementById("joke-4")
-  let ans2 = document.getElementById("joke-5")
-  let joke3 = document.getElementById("joke-6")
-  let ans3 = document.getElementById("joke-7")
-  joke1.innerText = jokeArr[ind1]
-  ans1.innerText = answerArr[ind1]
-  joke2.innerText = jokeArr[ind2]
-  ans2.innerText = answerArr[ind2]
-  joke3.innerText = jokeArr[ind3]
-  ans3.innerText = answerArr[ind3]
+function fillJokes() {
+  let ind1 = Math.floor(Math.random() * 14);
+  let ind2 = Math.floor(Math.random() * (14 - 14) + 14);
+  let ind3 = Math.floor(Math.random() * (14 - 28) + 28);
+  let joke1 = document.getElementById("joke-2");
+  let ans1 = document.getElementById("joke-3");
+  let joke2 = document.getElementById("joke-4");
+  let ans2 = document.getElementById("joke-5");
+  let joke3 = document.getElementById("joke-6");
+  let ans3 = document.getElementById("joke-7");
+  joke1.innerText = jokeArr[ind1];
+  ans1.innerText = answerArr[ind1];
+  joke2.innerText = jokeArr[ind2];
+  ans2.innerText = answerArr[ind2];
+  joke3.innerText = jokeArr[ind3];
+  ans3.innerText = answerArr[ind3];
   // i know i can just call math random 3 times but i feel its easier this way as i dont need to check if any jokes match
 }
 
-fillJokes()
-callJoke()
+
+  // console.log(toBeTransArr);
 
 
-$(document).ready(function () {
+let yesButt = document.getElementById('yesterButt')
+yesButt.addEventListener('click', function(){
+  let yesJ = document.getElementById('yesterdaysJoke') 
+  let yesA = document.getElementById('yesterdaysAnswer')
+  let yesAns = localStorage.getItem('yesSet')
+  let yesJokes = localStorage.getItem('yesJoke')
+  yesJ.innerText = yesAns
+  yesA.innerText = yesJokes
+})
+
+$(document).ready(function () {  
+  fillJokes();
+  for (let indx = 0; indx < jokePlacementArr.length; indx++) {
+    const element = jokePlacementArr[indx];
+    toBeTransArr[indx] = jokePlacementArr[indx].innerHTML;}
   makestr();
-  settings.data.q = transStr;
-  dropdownSelect.addEventListener("change", function () {   
+  dropdownSelect.addEventListener("change", function () {
     validate();
-    var currentAtr = dropdownSelect.options[dropdownSelect.selectedIndex].label;
+    var currentLang = document.getElementById("languages");
+    var currentAtr = currentLang.options[currentLang.selectedIndex].label;
     console.log(currentAtr);
     if (currentAtr != "en") {
       settings.data.target = currentAtr;
@@ -538,4 +554,4 @@ function updatePlaceholders(updateString) {
   }
 }
 
-setInterval(checkTime(), 5000)
+setInterval(checkTime(), 5000);
