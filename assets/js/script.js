@@ -43,6 +43,75 @@ const settings = {
   },
 };
 
+const options = {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': '915dac4a9dmsh0b299010a64be77p11cef1jsncff8db7d42f8',
+    'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+  }
+};
+
+function testDadJoke() {
+  return fetch('https://dad-jokes.p.rapidapi.com/random/joke', options)
+    .then(response => response.json())
+    // .then(response => console.log(response))
+    .then(data => data)
+    .catch(err => console.error(err));
+
+}
+
+function createJokeElement() {
+  for (let index = 0; index < dadJokeAr.length; index++) {
+    const jokeElement = dadJokeAr[index];
+
+
+  }
+}
+
+let dadJokeAr = []
+let dadpunchlineAr = []
+
+document.getElementById('.ui button')
+
+function callJoke() {
+  var djSetup = document.getElementById('joke-0')
+  var djPunchline = document.getElementById('joke-1')
+  djSetup.innerText = 'Loading Joke'
+  djPunchline.innerText = ''
+  testDadJoke().then((data) => {
+    console.log (data)
+    // while (data.body[0].NSFW == false) {
+    //   testDadJoke().then((data) => {return data})
+    // }
+    if (data.body[0].NSFW == false) {
+      const joke = data.body[0].setup;
+      const punchline = data.body[0].punchline;
+      dadJokeAr.unshift(joke);
+      console.log(joke, punchline)
+      djSetup.innerText = joke
+      djPunchline.innerText = punchline
+    } 
+  })
+}
+
+  // for (let index = 0; index < dadJokeAr.length; index++) {
+  //     const jokeElement = dadJokeAr[index]; 
+  //     const heading = document.createElement('h1'); 
+  //     const jokediv = document.getElementById('joke');
+  //    heading.innerHTML = jokeElement;
+  //    heading.className = 'dadjoke'
+  //    jokediv.appendChild(heading);
+  //    heading.id = `joke${index}`
+      
+     
+  
+
+
+
+
+
+callJoke();
+
 // const options = {
 //     method: 'GET',
 //     headers: {
@@ -59,7 +128,7 @@ const settings = {
 // }
 // testDadJoke();
 
-function checkTime(){
+function checkTime() {
   //this should be in an interval that checks perhaps every 5-10 seconds
   //access local storage to get yesterdays joke time
   // have it store month, day, hour and minute in an array
@@ -77,38 +146,38 @@ for (let index = 0; index < populateButts.length; index++) {
   let jotdPunchline = document.getElementById('joke-0')
   let jotdAns = document.getElementById('joke-1')
   const element = populateButts[index];
-  element.addEventListener("click", function(){
+  element.addEventListener("click", function () {
     console.log(element, index)
-    if (index === 0){
+    if (index === 0) {
       joke = document.getElementById('joke-2')
       answer = document.getElementById('joke-3')
       var currentJotdPl = jotdPunchline.innerText
       var currentJotdAns = jotdAns.innerText
       jotdPunchline.innerText = joke.innerText
       jotdAns.innerText = answer.innerText
-      console.log (currentJotdAns, currentJotdPl)
+      console.log(currentJotdAns, currentJotdPl)
       joke.innerText = currentJotdPl
       answer.innerText = currentJotdAns
-    } else if (index === 1){
+    } else if (index === 1) {
       joke = document.getElementById('joke-4')
       answer = document.getElementById('joke-5')
       var currentJotdPl = jotdPunchline.innerText
       var currentJotdAns = jotdAns.innerText
       jotdPunchline.innerText = joke.innerText
       jotdAns.innerText = answer.innerText
-      console.log (currentJotdAns, currentJotdPl)
+      console.log(currentJotdAns, currentJotdPl)
       joke.innerText = currentJotdPl
       answer.innerText = currentJotdAns
     } else {
-    joke = document.getElementById('joke-6')
-    answer = document.getElementById('joke-7')
-    var currentJotdPl = jotdPunchline.innerText
-    var currentJotdAns = jotdAns.innerText
-    jotdPunchline.innerText = joke.innerText
-    jotdAns.innerText = answer.innerText
-    console.log (currentJotdAns, currentJotdPl)
-    joke.innerText = currentJotdPl
-    answer.innerText = currentJotdAns
+      joke = document.getElementById('joke-6')
+      answer = document.getElementById('joke-7')
+      var currentJotdPl = jotdPunchline.innerText
+      var currentJotdAns = jotdAns.innerText
+      jotdPunchline.innerText = joke.innerText
+      jotdAns.innerText = answer.innerText
+      console.log(currentJotdAns, currentJotdPl)
+      joke.innerText = currentJotdPl
+      answer.innerText = currentJotdAns
     }
   })
 }
