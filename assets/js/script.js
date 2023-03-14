@@ -22,7 +22,51 @@ let langButtArr = document.getElementsByClassName("language-button");
 let dropdownSelect = document.getElementById("languages");
 let populateButts = document.getElementsByClassName("populate");
 
-jokeArr = [
+const jotdJokeArr = [
+  "What did the evil chicken lay?",
+
+  "I'm afraid for the calendar.",
+
+  "What did the ocean say to the beach?",
+
+  "I only know 25 letters of the alphabet.",
+
+  "What did the zero say to the eight?",
+
+  "I asked my dog what’s two minus two.",
+
+  "What does a sprinter eat before a race?",
+
+  "Dad, did you get a haircut?",
+
+  "I don’t trust those trees.",
+
+  "How do you get a squirrel to like you?",
+]
+
+const JotdAnswerArr = [
+  "Deviled Eggs",
+
+  "Its days are numbered.",
+
+  "Nothing, it just waved.",
+
+  " I don’t know y.",
+
+  "That belt looks good on you.",
+
+  "He said nothing.",
+
+  "Nothing, they fast!",
+
+  "No, I got them all cut!",
+
+  "They seem kind of shady.",
+
+  "Act like a nut.",
+]
+
+const jokeArr = [
 
 "What do you call a line of men waiting to get haircuts?",
 
@@ -110,7 +154,7 @@ jokeArr = [
 
 ]
 
-answerArr = [
+const answerArr = [
 
 "A barberqueue.",
 
@@ -213,7 +257,7 @@ const settings = {
   method: "POST",
   headers: {
     "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-    "x-rapidapi-key": "a2f926190dmsh6f066a73d9de2acp186a01jsn9e155a373bf2",
+    // "x-rapidapi-key": "a2f926190dmsh6f066a73d9de2acp186a01jsn9e155a373bf2",
     "content-type": "application/x-www-form-urlencoded",
   },
   data: {
@@ -226,7 +270,7 @@ const settings = {
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '46aa698a57msh67443578dd57e7fp1794acjsnfbdded0b23d9',
+    // 'X-RapidAPI-Key': '46aa698a57msh67443578dd57e7fp1794acjsnfbdded0b23d9',
     'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
   }
 };
@@ -267,7 +311,11 @@ function callJoke() {
       console.log(joke, punchline)
       djSetup.innerText = joke
       djPunchline.innerText = punchline
-    } 
+    } else {
+      JIndx = Math.floor(Math.random() * 10)
+      djSetup.innerText = jotdJokeArr[JIndx]
+      djPunchline.innerText = JotdAnswerArr[JIndx]
+    }
   })
 }
 
@@ -287,7 +335,7 @@ function callJoke() {
 
 
 
-callJoke();
+
 
 // const options = {
 //     method: 'GET',
@@ -306,6 +354,40 @@ callJoke();
 // testDadJoke();
 
 function checkTime() {
+  let nowMonth  = Number(dayjs().format('M'))
+  let nowDay = Number(dayjs().format('D'))
+  let nowHour = Number(dayjs().format('H'))
+  let nowMinute = Number(dayjs().format('m'))
+  console.log(nowMonth, nowDay, nowHour, nowMinute)
+  let stored_time = JSON.parse(localStorage.getItem('dateArr'))
+  if (stored_time == null){
+    storeThis = JSON.stringify([nowMonth, nowDay, nowHour, nowMinute])
+    localStorage.setItem('dateArr', storeThis)
+    console.log(storeThis)
+  } else{ 
+    console.log(stored_time)
+    let storeMonth = Number(stored_time[0])
+    let storeDay = Number(stored_time[1])
+    let storeHour = Number(stored_time[2])
+    let storeMinute = Number(stored_time[3])
+    console.log(storeMonth, storeDay, storeHour, storeMinute)
+    if (nowMonth > storeMonth){
+      if(nowHour >= storeHour){
+        if (nowMinute> storeMinute){
+          console.log("joke should change")
+          // localStorage.setItem('JOTD', set previous joke here)
+          // callJoke()
+        } else{ console.log("MG,HG/E,ML")}
+      } else {console.log("MG, HL")}
+    } else if (nowDay > storeDay) {
+      if(nowHour >= storeHour){
+        if (nowMinute> storeMinute){
+          console.log('joke should change')
+          // localStorage.setItem('JOTD', set previous joke here )
+          // callJoke()
+    } else {console.log("MS, DG, HG/E , ML ")}
+  } else {console.log("MS, DG, HL")}
+} else { console.log ("MS, DL")}
   //this should be in an interval that checks perhaps every 5-10 seconds
   //access local storage to get yesterdays joke time
   // have it store month, day, hour and minute in an array
@@ -315,7 +397,12 @@ function checkTime() {
   // if month isnt greater, check day, if day isnt greater, a day hasnt passed. 
   // if day is is greater, check hour, if hour is greater, a day has passed.
   //if hour equal, check minute, if minute is greater a day has passed, if either are not greater, a day has not passed. 
+  }
+
+
 } // if this returns true, change the joke of the day by calling the dad joke api again. 
+
+checkTime()
 
 for (let index = 0; index < populateButts.length; index++) {
   let answer = ''
@@ -374,14 +461,6 @@ function testGoogleTranslate() {
 
 function makestr() {
   transStr = toBeTransArr.join(" | ")
-  // for (let i = 0; i < toBeTransArr.length; i++) {
-  //   const element = toBeTransArr[i];
-  //   if (i < toBeTransArr.length - 1) {
-  //     transStr = transStr + element + " |";
-  //   } else {
-  //     transStr = transStr + element;
-  //   } 
-  // }
   console.log(transStr);
 }
 // try seperating by Array.join()
@@ -414,12 +493,15 @@ function fillJokes(){
   ans3.innerText = answerArr[ind3]
   // i know i can just call math random 3 times but i feel its easier this way as i dont need to check if any jokes match
 }
+
 fillJokes()
+callJoke()
+
 
 $(document).ready(function () {
   makestr();
   settings.data.q = transStr;
-  dropdownSelect.addEventListener("change", function () {
+  dropdownSelect.addEventListener("change", function () {   
     validate();
     var currentAtr = dropdownSelect.options[dropdownSelect.selectedIndex].label;
     console.log(currentAtr);
@@ -455,3 +537,5 @@ function updatePlaceholders(updateString) {
     jokey.innerText = element;
   }
 }
+
+setInterval(checkTime(), 5000)
