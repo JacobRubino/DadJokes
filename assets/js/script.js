@@ -248,7 +248,7 @@ const settings = {
   method: "POST",
   headers: {
     "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-    "x-rapidapi-key": "bac07ccaaamsh2fffebc888fd67dp1f1e3djsn0428a5223bad",
+    "x-rapidapi-key": "b33c9eedf6mshd52e5546c879707p1d5f51jsn72812cc74aa5",
     "content-type": "application/x-www-form-urlencoded",
   },
   data: {
@@ -274,7 +274,7 @@ function testDadJoke() {
       .then((data) => data)
       .catch((err) => console.error(err))
   );
-}
+}makestr
 
 function createJokeElement() {
   for (let index = 0; index < dadJokeAr.length; index++) {
@@ -355,9 +355,9 @@ function checkTime() {
   if (stored_time == null) {
     storeThis = JSON.stringify([nowMonth, nowDay, nowHour, nowMinute]);
     localStorage.setItem("dateArr", storeThis);
-    console.log(storeThis);
+    // console.log(storeThis);
   } else {
-    console.log(stored_time);
+    // console.log(stored_time);
     let storeMonth = Number(stored_time[0]);
     let storeDay = Number(stored_time[1]);
     let storeHour = Number(stored_time[2]);
@@ -390,18 +390,8 @@ function checkTime() {
     } else {
       console.log("MS, DL");
     }
-
-    //this should be in an interval that checks perhaps every 5-10 seconds
-    //access local storage to get yesterdays joke time
-    // have it store month, day, hour and minute in an array
-    // set each index on the array to the time it corresponds to, month, day, hour, minute
-    // new month is like a new day, but will ruin us checking if current day > local stored day as current day will be a lower number,
-    // so if month is greater go to check if hour is greater, then minute.
-    // if month isnt greater, check day, if day isnt greater, a day hasnt passed.
-    // if day is is greater, check hour, if hour is greater, a day has passed.
-    //if hour equal, check minute, if minute is greater a day has passed, if either are not greater, a day has not passed.
   }
-} // if this returns true, change the joke of the day by calling the dad joke api again.
+} 
 
 
 
@@ -414,7 +404,7 @@ for (let index = 0; index < populateButts.length; index++) {
   let jotdAns = document.getElementById("joke-1");
   const element = populateButts[index];
   element.addEventListener("click", function () {
-    console.log(element, index);
+    // console.log(element, index);
     if (index === 0) {
       joke = document.getElementById("joke-2");
       answer = document.getElementById("joke-3");
@@ -422,7 +412,7 @@ for (let index = 0; index < populateButts.length; index++) {
       var currentJotdAns = jotdAns.innerText;
       jotdPunchline.innerText = joke.innerText;
       jotdAns.innerText = answer.innerText;
-      console.log(currentJotdAns, currentJotdPl);
+      // console.log(currentJotdAns, currentJotdPl);
       joke.innerText = currentJotdPl;
       answer.innerText = currentJotdAns;
     } else if (index === 1) {
@@ -432,7 +422,7 @@ for (let index = 0; index < populateButts.length; index++) {
       var currentJotdAns = jotdAns.innerText;
       jotdPunchline.innerText = joke.innerText;
       jotdAns.innerText = answer.innerText;
-      console.log(currentJotdAns, currentJotdPl);
+      // console.log(currentJotdAns, currentJotdPl);
       joke.innerText = currentJotdPl;
       answer.innerText = currentJotdAns;
     } else {
@@ -442,7 +432,7 @@ for (let index = 0; index < populateButts.length; index++) {
       var currentJotdAns = jotdAns.innerText;
       jotdPunchline.innerText = joke.innerText;
       jotdAns.innerText = answer.innerText;
-      console.log(currentJotdAns, currentJotdPl);
+      // console.log(currentJotdAns, currentJotdPl);
       joke.innerText = currentJotdPl;
       answer.innerText = currentJotdAns;
     }
@@ -473,7 +463,7 @@ function validate() {
     console.log("select one answer");
   } else {
     var selectedText = card.options[card.selectedIndex].text;
-    console.log(selectedText);
+    // console.log(selectedText);
   }
 }
 
@@ -539,19 +529,19 @@ function fetchTranslation() {
 }
 function updatePlaceholders(updateString) {
   var comp = updateString.split("|");
-  console.log(comp);
+  // console.log(comp);
   for (let index = 0; index < comp.length; index++) {
     const element = comp[index].trim();
-    console.log(element);
+    // console.log(element);
     translationArr[index] = element;
-    console.log(translationArr);
+    // console.log(translationArr);
   }
   for (let index = 0; index < translationArr.length; index++) {
     const element = translationArr[index];
-    console.log(element);
+    // console.log(element);
     var jokey = document.getElementById(`joke-${index}`);
     jokey.innerText = element;
   }
 }
 
-setInterval(checkTime(), 5000);
+setInterval(checkTime, 5000);
