@@ -16,12 +16,12 @@ To use: <br>
 5. You also have the option to translate yesterday's joke of the day by clicking the "Click Here" button. <br>
 6. Additionally, there are three more random jokes at the bottom of the page if you would like to have multiple jokes at the tip of your tounge by clicking the "Populate" button.<br><br>
 Below is a link to our deployed Dad Joke Translator Application: <br>
-<a href="">Dad Joke Translator</a>
+<a href="https://jacobrubino.github.io/TheStrings-Website/">Dad Joke Translator</a>
 <br>
 <br>
 Below is a screenshot of the website you will access with the link above:
 
-![Alt text](./assets/images/Screen%20Shot%202023-03-14%20at%2012.22.18%20AM.png "Screen-Shot")
+![Alt text](./assets/images/image.png "Screen-Shot")
 
 ## Credits
 
