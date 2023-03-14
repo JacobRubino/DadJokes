@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  /* @pageFont: font-family: 'Petit Formal Script', cursive;
-  font-family: 'Raleway', sans-serif; */
 }
 
 body {
@@ -37,36 +35,14 @@ body {
   border-bottom: 3px solid black;
 }
 
-.large {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-
 .men {
   border: 4px solid black;
 }
-
-.main-3 {
-  border: 4px solid black;
-  margin: 30px;
-  padding: 10px white;
-}
-
-/* .tranlator-JOTD {
-  display:flex;
-  align-items: center;
-  gap: 5px;
-} */
 
 .translator {
   background-color: rgb(126, 26, 26);
 }
 
-.JOTD {
-  color: rgb(126, 26, 26);
-}
 
 .white-bg {
   background-color: white;
@@ -75,16 +51,10 @@ body {
 .JOTD-header {
   color: rgb(126, 26, 26);
   font-size: 30px;
-  font-family: 'Raleway', sans-serif;
-}
-
-.yesterday {
-  display: inline-flex;
-  flex-direction: column;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 select {
-  /* outline: 0; */
   width: 100%;
   height: 100%;
   color: black;
@@ -96,12 +66,9 @@ select {
 .select {
   position: relative;
   display: block;
-  /* width: 15em;
-  height: 2em; */
-  line-height: 6;
-  /* overflow: hidden; */
-  border-radius: .25em;
-  padding-bottom: 10px;
+  line-height: 10;
+  border-radius: 3em;
+  padding-bottom: 30px;
 }
 
 .morejokes {
@@ -118,23 +85,98 @@ select {
 
 .font {
   font-size: 30px;
-  font-family: 'Raleway', sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: rgb(126, 26, 26);
 }
 
 .nav-font {
   font-size: 23px;
-  font-family: 'Raleway', sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .sub-font {
   font-size: 30px;
-  font-family: 'Raleway', sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .jokefont {
   color: black;
-  font-family: 'Raleway', sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 30px;
 
+}
+
+
+/* About Dad Jokes/About Us CSS*/
+
+.about-header {
+  text-align: center;
+  padding: 40px;
+  font-size: 60px;
+  margin-top: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(126, 26, 26);
+
+}
+
+.about-hero {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 6px solid rgb(126, 26, 26);
+}
+
+.about-homebtn {
+  width: 9%;
+  height: 4%;
+  margin: 12px;
+  border-radius: 4px;
+}
+
+.about-content-container {
+  display: block;
+  padding: 30px;
+  margin: 30px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  margin-bottom: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 120px;
+  height: 120px;
+  padding: 5px;
+}
+
+.names {
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(126, 26, 26);
+}
+
+.contact-text {
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(126, 26, 26);
+}
+
+.contact-img img {
+  height: auto;
+  max-width: 50px;
+  margin-bottom: 20px;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
