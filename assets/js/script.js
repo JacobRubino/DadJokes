@@ -213,7 +213,7 @@ const settings = {
   method: "POST",
   headers: {
     "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-    "x-rapidapi-key": "26e9993876msh0d6ebef81a82d97p17d492jsn2791beb50392",
+    "x-rapidapi-key": "a2f926190dmsh6f066a73d9de2acp186a01jsn9e155a373bf2",
     "content-type": "application/x-www-form-urlencoded",
   },
   data: {
@@ -226,7 +226,7 @@ const settings = {
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '915dac4a9dmsh0b299010a64be77p11cef1jsncff8db7d42f8',
+    'X-RapidAPI-Key': '46aa698a57msh67443578dd57e7fp1794acjsnfbdded0b23d9',
     'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
   }
 };
@@ -260,9 +260,6 @@ function callJoke() {
   djPunchline.innerText = ''
   testDadJoke().then((data) => {
     console.log (data)
-    // while (data.body[0].NSFW == false) {
-    //   testDadJoke().then((data) => {return data})
-    // }
     if (data.body[0].NSFW == false) {
       const joke = data.body[0].setup;
       const punchline = data.body[0].punchline;
@@ -399,13 +396,32 @@ function validate() {
   }
 }
 
+function fillJokes(){
+  let ind1 = Math.floor(Math.random()*(14))
+  let ind2 = Math.floor(Math.random()*(14-14) + 14)
+  let ind3 = Math.floor(Math.random()*(14-28) + 28)
+  let joke1 = document.getElementById("joke-2")
+  let ans1 = document.getElementById("joke-3")
+  let joke2 = document.getElementById("joke-4")
+  let ans2 = document.getElementById("joke-5")
+  let joke3 = document.getElementById("joke-6")
+  let ans3 = document.getElementById("joke-7")
+  joke1.innerText = jokeArr[ind1]
+  ans1.innerText = answerArr[ind1]
+  joke2.innerText = jokeArr[ind2]
+  ans2.innerText = answerArr[ind2]
+  joke3.innerText = jokeArr[ind3]
+  ans3.innerText = answerArr[ind3]
+  // i know i can just call math random 3 times but i feel its easier this way as i dont need to check if any jokes match
+}
+fillJokes()
+
 $(document).ready(function () {
   makestr();
   settings.data.q = transStr;
   dropdownSelect.addEventListener("change", function () {
     validate();
-    var currentLang = document.getElementById("languages");
-    var currentAtr = currentLang.options[currentLang.selectedIndex].label;
+    var currentAtr = dropdownSelect.options[dropdownSelect.selectedIndex].label;
     console.log(currentAtr);
     if (currentAtr != "en") {
       settings.data.target = currentAtr;
