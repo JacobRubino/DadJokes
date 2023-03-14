@@ -1,10 +1,8 @@
-# TheStrings-Website
-A collaboration from group 5
-Favorite thing about javascript would be automation.
+# Dad Joke Translator
 
 ## Description
 
-This is a Dad Joke Translator. Everyone loves a good dad joke, and learning a language is hard enough. We've created this application to make learning languages a little easier. Everyday you can learn a new joke in a new language, and be the funniest one in the room in many languages! It's up to you to remember the punchline.
+This is a Dad Joke Translator application. Who doesn't love a good dad joke? While learning a language is hard enough, we've created this application to make learning languages a little more fun. Everyday you can learn a new joke in a language of your choosing, and have a knee-slappin' laugh in a variety of languages! Now it's up to you to remember the punchline.
 
 ## Usage
 
@@ -34,7 +32,9 @@ Thomas Flynn
 Reference Pages: <br>
 <a href="https://www.freepik.com/free-vector/find-person-job-opportunity_8063764.htm#query=default%20avatar&position=4&from_view=keyword&track=ais">Avatars</a><br>
 <a href="https://www.thepioneerwoman.com/home-lifestyle/a35617884/best-dad-jokes/">Dad Jokes</a><br>
-<a href="https://www.menshealth.com/trending-news/a34437277/best-dad-jokes/?utm_source=google&utm_medium=cpc&utm_campaign=arb_ga_mnh_d_bm_prog_org_us_a34437277&gclid=Cj0KCQiA9YugBhCZARIsAACXxeJKmURWVdX8IKVP1f-MY8LQQmTFsEo5kIgy85klrOQx1XHpJtNeqPIaAt2nEALw_wcB">Dad Jokes</a><br>
+<a href="https://www.countryliving.com/life/a27452412/best-dad-jokes/">Dad Jokes</a><br>
+<a href="https://www.menshealth.com/trending-news/a34437277/best-dad-jokes/?utm_source=google&utm_medium=cpc&utm_campaign=arb_ga_mnh_d_bm_prog_org_us_a34437277gclid=Cj0KCQiA9YugBhCZARIsAACXxeJKmURWVdX8IKVP1f-MY8LQQmTFsEo5kIgy85klrOQx1XHpJtNeqPIaAt2nEALw_wcB">Dad Jokes</a><br>
+<a href="https://fonts.google.com/">Font</a><br>
 <a href="https://uxwing.com/github-icon/">Github Logo</a><br>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">.Split</a><br>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim">.Trim</a><br>
