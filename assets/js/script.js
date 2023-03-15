@@ -294,9 +294,9 @@ function callJoke() {
   djPunchline.innerText = "";
   testDadJoke().then((data) => {
     console.log(data);
-    if (data.body[0].NSFW == false) {
-      const joke = data.body[0].setup;
-      const punchline = data.body[0].punchline;
+    const joke = data.body[0].setup;
+    const punchline = data.body[0].punchline;
+    if (data.body[0].NSFW == false) {     
       dadJokeAr.unshift(joke);
       console.log(joke, punchline);
       djSetup.innerText = joke;
@@ -305,6 +305,8 @@ function callJoke() {
       JIndx = Math.floor(Math.random() * 10);
       djSetup.innerText = jotdJokeArr[JIndx];
       djPunchline.innerText = JotdAnswerArr[JIndx];
+      localStorage.setItem('jotdSetup', joke)
+      localStorage.setItem('jotdPL', punchline)
     }
   });
 }
@@ -335,8 +337,6 @@ function callJoke() {
 // testDadJoke();
 
 function setJotd(){
-  localStorage.setItem('jotdSetup', "I absolutely love and admire the unintellignt, overweight, yellowish-orange skinned man with the bad combover covering his baldness who has had his finger on the nuclear button all these years...")
-  localStorage.setItem('jotdPL', "Wait... I was talking about Homer Simpson, who did you think I meant?")
   let setup = localStorage.getItem('jotdSetup')
   let joPl = localStorage.getItem('jotdPL')
   let jotdSetup = document.getElementById('joke-0')
@@ -354,6 +354,8 @@ function checkTime() {
   let nowMinute = Number(dayjs().format("m"));
   console.log(nowMonth, nowDay, nowHour, nowMinute);
   let stored_time = JSON.parse(localStorage.getItem("dateArr"));
+  // let setupp = document.getElementById('joke-0').innerText
+  // let jokePl = document.getElementById('joke-1').innerText
   if (stored_time == null) {
     storeThis = JSON.stringify([nowMonth, nowDay, nowHour, nowMinute]);
     localStorage.setItem("dateArr", storeThis);
@@ -369,6 +371,8 @@ function checkTime() {
       if (nowHour >= storeHour) {
         if (nowMinute > storeMinute) {
           console.log("joke should change");
+          localStorage.setItem('yesSet', `${jotdSetup}`)
+          localStorage.setItem('yesJoke', `${jokePL}`)
           callJoke()
           // localStorage.setItem('JOTD', set new joke here Pl and setup, and set yesterdays joke as the current one)
         } else {
@@ -381,7 +385,8 @@ function checkTime() {
       if (nowHour >= storeHour) {
         if (nowMinute > storeMinute) {
           console.log("joke should change");
-          // localStorage.setItem('JOTD', set new joke here Pl and setup, and set current as yesterdays joke )
+          localStorage.setItem('yesSet', `${jotdSetup}`)
+          localStorage.setItem('yesJoke', `${jokePL}`)
           callJoke()
         } else {
           console.log("MS, DG, HG/E , ML ");
@@ -470,8 +475,8 @@ function validate() {
 
 function fillJokes() {
   let ind1 = Math.floor(Math.random() * 14);
-  let ind2 = Math.floor(Math.random() * (15 - 14) + 14);
-  let ind3 = Math.floor(Math.random() * (14 - 28) + 28);
+  let ind2 = Math.floor(Math.random() * (28 - 14) + 14);
+  let ind3 = Math.floor(Math.random() * (42 - 28) + 28);
   let joke1 = document.getElementById("joke-2");
   let ans1 = document.getElementById("joke-3");
   let joke2 = document.getElementById("joke-4");
@@ -486,7 +491,12 @@ function fillJokes() {
   ans3.innerText = answerArr[ind3];
   // i know i can just call math random 3 times but i feel its easier this way as i dont need to check if any jokes match
 }
+function checkIfJoke(){
+  if (localStorage.getItem('jotdSetup') === null){
+    callJoke()
+  }
 
+}
 
   // console.log(toBeTransArr);
 
