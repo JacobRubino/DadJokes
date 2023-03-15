@@ -248,7 +248,7 @@ const settings = {
   method: "POST",
   headers: {
     "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-    "x-rapidapi-key": "b33c9eedf6mshd52e5546c879707p1d5f51jsn72812cc74aa5",
+    "x-rapidapi-key": "adefb279f4mshe6b4bb281021986p175a62jsn43cb69d9c4df",
     "content-type": "application/x-www-form-urlencoded",
   },
   data: {
